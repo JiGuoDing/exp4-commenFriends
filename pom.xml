@@ -61,6 +61,12 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.7.0</version>
                 <configuration>
+                    <archive>
+                        <manifest>
+                            <!--指定主类（这里是内部类，因此需要$）-->
+                            <mainClass>mutualFriends.MutualFriends$MutualFriendsDriver</mainClass>
+                        </manifest>
+                    </archive>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>

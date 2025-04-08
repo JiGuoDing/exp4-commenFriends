@@ -1,4 +1,4 @@
-package commenFriends;
+package mutualFriends;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
@@ -65,7 +65,7 @@ public class MutualFriends {
         public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
             Configuration conf = new Configuration();
             Job job = Job.getInstance(conf, "MutualFriends");
-            job.setJarByClass(MutualFriendsDriver.class);
+            job.setJarByClass(MutualFriends.class);
             job.setMapperClass(MutualFriendsMapper.class);
             job.setReducerClass(MutualFriendsReducer.class);
 
